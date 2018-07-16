@@ -26,4 +26,25 @@
 
 .news_util{
   display: flex;
+  justify-content:space-between;
+  margin: 0 30rpx;
+}
+
+.news_date{
+  padding-top: 20rpx;
+  opacity: 0.6;
+  font-size: 24rpx;
+  line-height: 34rpx;
+
+}
+
+.readCount{
+  padding-top: 20rpx;
+  opacity: 0.6;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+
+.ending{
+  height: 100rpx;
 }
