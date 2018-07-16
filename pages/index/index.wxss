@@ -1,0 +1,31 @@
+/**index.wxss**/
+.news_item {
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  margin: 0 40rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.news_text{
+  width: 400rpx;
+  height: 180rpx;
+}
+
+.news_pic{
+  padding-left: 50rpx;
+  width: 320rpx;
+  height: 180rpx;
+}
+
+.news_title{
+  opacity: 0.8;
+  font-size: 32rpx;
+  line-height: 45rpx;
+}
+
+.news_date{
+  opacity: 0.6;
+  font-size: 25rpx;
+  line-height: 35rpx;
+}

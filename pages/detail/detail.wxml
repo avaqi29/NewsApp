@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<view class = 'news_title'>
+外媒称香港回归15年打破“经济将死”预言
+</view>
+
+<view class='news_util'>
+  <view class = 'news_date'>中国新闻网 07-01 09:34</view>
+  <view class = 'readcount'>阅读数 471</view>
+</view>
+
+<view class = 'news_core'>
+  <view class="news_content">
+报道特别强调金融合作方面，中央支持第三方利用香港办理人民币贸易投资结算，进一步丰富香港人民币离岸产品”。自1997年7月1日回归之后，香港与内地的经济关系日益紧密，“北京方面迫切希望利用这个全球金融中心来进行重大改革试验，比如将人民币国际化的努力。
+  </view>
+  <image class='news_img' src='/pics/news_thumb2.jpg' mode="widthFix"></image>
+
+  <view class="news_content" wx:for="{1,2,3}" wx:key="">
+    <p>
+报道特别强调金融合作方面，中央支持第三方利用香港办理人民币贸易投资结算，进一步丰富香港人民币离岸产品”。自1997年7月1日回归之后，香港与内地的经济关系日益紧密，“北京方面迫切希望利用这个全球金融中心来进行重大改革试验，比如将人民币国际化的努力。
+    </p>
+  </view>
+</view>
+
+

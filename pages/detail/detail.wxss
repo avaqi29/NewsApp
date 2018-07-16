@@ -1,0 +1,29 @@
+/* pages/detail/detail.wxss */
+.news_title{
+  margin: 0 30rpx;
+  align-items: center;
+  opacity: 0.9;
+  font-size: 48rpx;
+  line-height: 67rpx;
+}
+
+.news_core{
+  margin: 0 30rpx;
+  align-items: center;
+}
+
+.news_img{
+  padding-top: 40rpx;
+  width: 690rpx;
+}
+
+.news_content{
+  padding-top: 40rpx;
+  opacity: 0.8;
+  font-size: 32rpx;
+  line-height: 45rpx;
+}
+
+.news_util{
+  display: flex;
+}

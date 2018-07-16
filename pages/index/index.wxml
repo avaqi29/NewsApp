@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="news_list" wx:for="{{news_list}}" wx:key="">
+  <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
+    <view class="news_text">
+      <view class="news_title">{{item.title}}</view>
+      <view class="news_date">{{item.date}}</view>
+    </view>
+    <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
+  </view>
+</view>
