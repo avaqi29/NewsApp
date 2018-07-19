@@ -1,5 +1,5 @@
 /* pages/detail/detail.wxss */
-.news_title{
+.news_title {
   margin: 0 30rpx;
   align-items: center;
   opacity: 0.9;
@@ -7,30 +7,30 @@
   line-height: 67rpx;
 }
 
-.news_core{
+.news_core {
   margin: 0 30rpx;
   align-items: center;
 }
 
-.news_img{
+.news_img {
   padding-top: 40rpx;
   width: 690rpx;
 }
 
-.news_content{
+.news_content {
   padding-top: 40rpx;
   opacity: 0.8;
   font-size: 32rpx;
   line-height: 45rpx;
 }
 
-.news_util{
+.news_util {
   display: flex;
   justify-content:space-between;
   margin: 0 30rpx;
 }
 
-.news_date{
+.news_date {
   padding-top: 20rpx;
   opacity: 0.6;
   font-size: 24rpx;
@@ -38,13 +38,13 @@
 
 }
 
-.readCount{
+.readCount {
   padding-top: 20rpx;
   opacity: 0.6;
   font-size: 24rpx;
   line-height: 34rpx;
 }
 
-.ending{
+.ending {
   height: 100rpx;
 }

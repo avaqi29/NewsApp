@@ -52,10 +52,14 @@ Page({
   },
 
   setNewsDetail(result) {
+    let picPath = "/pics/news.jpg"
+    if (result.firstImage != null) {
+      picPath = result.firstImage
+    }
     this.setData({
       news_title: result.title,
       news_date: `${result.source} ${result.date.slice(5, 10)} ${result.date.slice(11, 16)}`,
-      news_pic: result.firstImage,
+      news_pic: picPath,
       readCount: result.readCount, 
       news_firstcontent: result.content[0],
       news_content: result.content.slice(1)
