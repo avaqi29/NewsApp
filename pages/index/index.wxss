@@ -30,18 +30,8 @@
   line-height: 35rpx;
 }
 
-
-.swiper-tab {
-	width: 100%;
-	border-bottom: 2rpx solid #777777;
-	text-align: center;
-	line-height: 80rpx;}
-.swiper-tab-list {  font-size: 30rpx;
-    display: inline-block;
-	width: 14.28%;
-	color: #991133;
+.category {
+  padding-left: 50rpx;
+  font-size: 40rpx;
+  line-height: 56rpx;
 }
-.on { color: #da7c0c;
-	border-bottom: 5rpx solid #da7c0c;}
- 
-.swiper-box { display: block; height: 100%; width: 100%; overflow: hidden; }

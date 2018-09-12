@@ -4,6 +4,7 @@ const app = getApp()
 const category = ["gn","gj","cj","yl","js","ty","other"]
 Page({
   data: {
+    news_cate:[],
     news_list: [],
     currentTab:0,
     item_count: 0,
@@ -19,7 +20,13 @@ Page({
   },
 
   onLoad: function () {
-    this.getNewsList()
+    for (let i = 0; i < category.length; i++) {
+      this.setData({
+        cate: category[i]
+      })
+      this.getNewsList();
+    }
+    
     var that = this;
     wx.getSystemInfo({
 
@@ -49,7 +56,7 @@ Page({
       },
       success: res => {
         let result = res.data.result
-        this.setNewsList(result)
+        this.setNewsList(result,cate)
       },
       complete: () => {
         callback && callback()
@@ -57,9 +64,10 @@ Page({
     })
   },
 
-  setNewsList(result){
+  setNewsList(result,cate){
     console.log(result.length)
     let news_list = []
+    let news_cate = this.data.news_cate;
     for (let i =0 ;i<result.length; i++){
       let picPath = "/pics/news.jpg"
       if (result[i].firstImage != null){
@@ -72,32 +80,41 @@ Page({
         pic: picPath
       })
     }
+    //let ca = this.data.cate;
+    //"gn","gj","cj","yl","js","ty","other"
+    let catetitle = "";
+    console.log(cate);
+    switch (cate) {
+      case "gn":
+        catetitle = "国内";
+        break;
+      case "gj":
+        catetitle = "国际";
+        break;
+      case "cj":
+        catetitle = "财经";
+        break;
+      case "yl":
+        catetitle = "娱乐";
+        break;
+      case "js":
+        catetitle = "军事";
+        break;
+      case "ty":
+        catetitle = "体育";
+        break;
+      case "other":
+        catetitle = "其他";
+        break;
+      }
+    news_cate.push({
+      news_title: catetitle,
+      news_list : news_list
+    });
     this.setData({
-      news_list : news_list,
+      news_cate: news_cate,
       item_count : result.length
     })
-  },
-
-  bindChange: function (e) {
-
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
-
-  },
-
-  swichNav: function (e) {
-
-    var that = this;
-
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current,
-        cate: category[e.target.dataset.current]
-      })
-      this.getNewsList()
-    }
   }
   
 })

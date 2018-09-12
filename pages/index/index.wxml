@@ -1,96 +1,16 @@
 <!--index.wxml-->
-
-
-<view class="swiper-tab">
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">国内</view>
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">国际</view>
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">财经</view>
-    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">娱乐</view>
-    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">军事</view>
-    <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">体育</view>
-    <view class="swiper-tab-list {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">其他</view>
+<view wx:for="{{news_cate}}" wx:key="">
+      <view class="category">{{item.news_title}}</view>
+      <view class="news_list" wx:for="{{item.news_list}}" wx:key="">
+        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
+          <view class="news_text">
+            <view class="news_title">{{item.title}}</view>
+            <view class="news_date">{{item.date}}</view>
+          </view>
+          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
+        </view>
+      </view>
 </view>
-
-
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{100*item_count+20}}px" bindchange="bindChange">
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="news_list" wx:for="{{news_list}}" wx:key="">
-        <view class="news_item" bindtap="newsItemTap" data-id = "{{item.id}}">
-          <view class="news_text">
-            <view class="news_title">{{item.title}}</view>
-            <view class="news_date">{{item.date}}</view>
-          </view>
-          <image class="news_pic" src="{{item.pic}}" mode="aspectFill"></image>
-        </view>
-      </view>
-    </swiper-item>
-</swiper>
-
+ 
 
 
